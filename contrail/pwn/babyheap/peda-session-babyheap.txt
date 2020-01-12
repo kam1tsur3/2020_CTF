@@ -1,0 +1,4 @@
+break *0x400ab3
+break *0x400add
+break free_data
+break *0x4009a0

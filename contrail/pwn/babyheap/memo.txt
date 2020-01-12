@@ -1,0 +1,24 @@
+main:
+_x8 = malloc(0x1000)
+
+if cnt 0x602084 < 4 
+	menu()
+	2: read(_x8)
+		printf()
+		index = scanf(%d) //
+		printf ("%s", chk_0x1000 + index*8)
+
+	1: write(_x8, cnt_addr)
+		_x128 = [cnt_addr]
+		printf("size")
+		scanf("%d", &_12c)
+		printf("data")
+		scanf("%s", &_x120) // 
+		
+		[chk0x1000+cnt*8] = malloc(size)
+		strncpy([chk0x1000+cnt*8],&_x120,size)
+		cnt++
+	3: free(_x8)
+		printf()
+		index = scanf("%d") //
+		free(index)

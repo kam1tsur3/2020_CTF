@@ -1,4 +1,4 @@
-#Contest name 
+# Contest name 
 
 ## Result
 00/1000 teams

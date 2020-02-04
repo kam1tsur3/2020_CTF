@@ -1,0 +1,47 @@
+global:
+region = 0x602120
+answer = 0x602128
+rules = 0x602140
+description = 0x6021e0
+
+init_proc:
+	len = getpagesize()
+	region = mmap(len << 0x14, len, 7, 0x22, 0, 0)
+	setvbuf()*3	
+	signal()
+	alarm()
+memset(s_x70, 0, 0x64)
+open_read_file("header.txt", 0x64, &s_x70):
+	file_x18 = rdi
+	_x1c = esi
+	buf_x28 = rdx
+
+	fd_x8 = open(file, 0)
+	_x4 = read(fd, buf, _x1c)
+	close(fd)
+	return _x4
+
+puts(&s)
+open_read_file("description.txt", 0x320, description)
+printf("\n %s\n", description)
+puts(" >> dou you obey")
+read(0, answer, 0xb) !!
+rval_read_x84 = open_read_file("RULES.txt", 0x96, rules)
+_x80 = rval_read_x84 >> 3
+_x78 = rules
+prctl(0x26, 1, 0, 0, 0)
+	0x26 = PR_SET_NO_NEW_PRIVS
+	limitation for execve
+prctl(0x16, 0x2, &_x80)
+	0x16 = PR_SET_SECCOMP
+	0x2 =  SECCOMP_GET_ACTION_AVAIL
+		seccompが使えることのかくにん的な
+strcmp(answer, "Y")
+0:
+	system("/bin/sh")
+1:
+	set_context:
+		offset = strlen(answer)
+		answer[offset] = 0x59 "Y" "pop rcx"
+		strcpy(region, answer)
+		region(0x539)

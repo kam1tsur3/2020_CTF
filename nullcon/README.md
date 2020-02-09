@@ -5,7 +5,9 @@ nullcon HackIM
 
 I solved the following challenge.
 
-* KiDPwN     (pwn) ?solves 437pt
-* Dark Honya (pwn) ?solves 460pt
+* KiDPwN     (pwn) 437pt ?solves 
+	* [writeup](https://github.com/kam1tsur3/2020_CTF/tree/master/nullcon/pwn/KiDPwN)
+* Dark Honya (pwn) 460pt ?solves
+	* [writeup](https://github.com/kam1tsur3/2020_CTF/tree/master/nullcon/pwn/Dark_Honya)
 
 I participated as a member of KUDoS.

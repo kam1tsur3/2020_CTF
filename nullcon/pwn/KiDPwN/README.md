@@ -1,5 +1,5 @@
 # KiDPwN 
-437pt ?solves(?/?)
+437pt ?solves
 
 ## TLDR
 * Set $rsp to higher address 
@@ -97,5 +97,10 @@ main() address = 0x555555554880
 Using this trick, I set rsp to $rbp-0x10.
 And leaked the binary base address and the libc base address.
 
-After [3 pop; ret] gadget, I overwrite got\_printf to one\_gadget by format string attack.
+After [3 pop; ret] gadget, I overwrote got\_printf to one\_gadget by format string attack.
 
+My exploitcode is [solve.py](https://github.com/kam1tsur3/2020_CTF/blob/master/nullcon/pwn/KiDPwN/solve.py).
+
+In this code, I use fsb() which returns format string payload.
+
+Twitter@kam1tsur3

@@ -53,6 +53,6 @@ I have no confidence for the reason of crash, but I think this is caused by some
 So I avoided this crash by making overwritten address got\_free-0x8 and writing 0xf bytes(not 0x10 bytes).
 
 ## Reference
-https://github.com/shellphish/how2heap/blob/master/glibc\_2.26/unsafe\_unlink.c
+https://github.com/shellphish/how2heap/blob/master/glibc_2.26/unsafe_unlink.c
 
 Twitter@kam1tsur3

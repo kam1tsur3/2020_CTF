@@ -1,4 +1,5 @@
-# KiDPwN 437pt ?solves(?/?)
+# KiDPwN 
+437pt ?solves(?/?)
 
 ## TLDR
 * Set $rsp to higher address 
@@ -75,10 +76,10 @@ The following memory dump is captured on my local enviroment using libc-2.27.so.
 So the address of libc\_start\_main\_ret is different from contest server's one.
 
 In the dump:
-binary base = 0x555555554000
-rbp = 0x7fffffffe370
-return address from main() = 0x7ffff7a05b97
-main() address = 0x555555554880
+binary base = 0x555555554000  
+rbp = 0x7fffffffe370  
+return address from main() = 0x7ffff7a05b97  
+main() address = 0x555555554880  
 
 ```
 0x7fffffffe360: 0x00007fffffffe450      0xff90000000000000

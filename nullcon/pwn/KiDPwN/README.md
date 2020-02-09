@@ -63,7 +63,7 @@ So we can change rsp to arbitary address and overwrite the return address from m
 
 However it is difficult to set rip to the ideal address, because PIE is enbale.
 I found the usable address on stack at rbp+0x18. It is main() address.
-So I wanted to change the return address to rop gadget (3 pop and ret)
+So I wanted to change the return address to rop gadget (3 pop and ret).
 By default, the return address from main() is an address in libc\_start\_main.
 In distributed libc.so, offset of libc\_start\_main\_ret is 0x20830.
 I searched rop gadget in libc, which of offset is near 0x20830. 
@@ -75,7 +75,7 @@ So we have to do bruteforce attack against 4bits.
 The following memory dump is captured on my local enviroment using libc-2.27.so.
 So the address of libc\_start\_main\_ret is different from contest server's one.
 
-In the dump:
+In the dump:  
 binary base = 0x555555554000  
 rbp = 0x7fffffffe370  
 return address from main() = 0x7ffff7a05b97  

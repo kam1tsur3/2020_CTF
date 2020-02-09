@@ -1,5 +1,4 @@
-# Contest name 
-nullcon HackIM
+# nullcon HackIM
 ## Result
 55/1208 teams
 

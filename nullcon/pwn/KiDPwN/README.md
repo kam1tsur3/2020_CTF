@@ -57,11 +57,11 @@ The binary has vulnerability of format string attack(0x97a) and misuses movsx op
 975:   b8 00 00 00 00          mov    eax,0x0
 97a:   e8 81 fd ff ff          call   700 <printf@plt>
 ```
-Normally, rsp register is set to lower address to store user input (at 0x92b), which of length is defined by user at fgets (0x8d9).
+Normally, rsp register is set to lower address to store user input (at 0x92b), which of length is defined by the user at fgets (0x8d9).
 But, for example, if the length of user input is 65424(0xff90), rsp is set to higher address.
-So we can change rsp to arbitary address and overwrite the return address from main().
+So we can change rsp to arbitary addresses and overwrite the return address from main().
 
-However it is difficult to set rip to the ideal address, because PIE is enbale.
+However, it is difficult to set rip to the ideal address, because PIE is enabled.
 I found the usable address on stack at rbp+0x18. It is main() address.
 So I wanted to change the return address to rop gadget (3 pop and ret).
 By default, the return address from main() is an address in libc\_start\_main.
@@ -70,9 +70,9 @@ I searched rop gadget in libc, which of offset is near 0x20830.
 And I found it(at 0x202e3).
 
 Using this gadget, I overwrote lower 2bytes of the return address.
-So we have to do bruteforce attack against 4bits.
+So we have to do a bruteforce attack against 4bits.
 
-The following memory dump is captured on my local enviroment using libc-2.27.so.
+The following memory dump is captured in my local environment using libc-2.27.so.
 So the address of libc\_start\_main\_ret is different from contest server's one.
 
 In the dump:  

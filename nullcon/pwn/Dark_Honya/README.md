@@ -23,7 +23,7 @@ result of checksec
 
 libc version: 2.23
 ### Exploit 
-All address of allocated chunks is stored in table at bss area.
+All address of allocated chunks is stored in a table at bss area.
 The table can have 16 entries and is located at fixed address 0x6021a0.
 We can select command below:
 * 1:buy a book
@@ -42,15 +42,15 @@ We can select command below:
 * 5:checkout
 	* exit
 
-There is a vulnerability of poison null byte when writing in chunk.
+There is a vulnerability of the poison null byte when writing in chunks.
 I made a fake chunk and used unsafe unlink attack.
 Despite we don't have read command, we can know libc address by overwriting got\_free to plt\_puts.
 
-My exploitcode is [solve.py](https://github.com/kam1tsur3/2020_CTF/blob/master/nullcon/pwn/Dark_Honya/solve.py).
+My exploit code is [solve.py](https://github.com/kam1tsur3/2020_CTF/blob/master/nullcon/pwn/Dark_Honya/solve.py).
 
 When overwriting got\_free, I met some strange crash.
-I have no confidence for the reason of crash, but I think this is caused by some alignment restriction.
-So I avoided this crash by making overwritten address got\_free-0x8 and writing 0xf bytes(not 0x10 bytes).
+I have no confidence for the reason of the crash, but I think this is caused by some alignment restriction.
+So I avoided this crash by making a overwritten address got\_free-0x8 and writing 0xf bytes(not 0x10 bytes).
 
 ## Reference
 https://github.com/shellphish/how2heap/blob/master/glibc_2.26/unsafe_unlink.c

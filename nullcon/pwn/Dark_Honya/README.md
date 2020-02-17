@@ -2,7 +2,7 @@
 460pt ?solves
 
 ## TLDR
-* Poison null byte
+* Off-by-one
 * Unsafe unlink
 * Leak libc address
 	* Overwrite got\_free to plt\_puts

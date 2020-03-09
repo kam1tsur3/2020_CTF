@@ -58,5 +58,4 @@ vagrant@ubuntu-bionic:~/workspace/2020/zer0pts/pwn/hidpwn$ perl -e 'print "A"x26
 Segmentation fault (core dumped)
 ```
 
-My exploit code is [solve.py](https://github.com/kam1tsur3/2020_CTF/blob/master/zer0pts/pwn/hipwn/solve.py).
-
+My exploit code is [solve.py](https://github.com/kam1tsur3/2020_CTF/blob/master/zer0pts/pwn/hidpwn/solve.py).

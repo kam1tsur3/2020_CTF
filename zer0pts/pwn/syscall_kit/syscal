@@ -1,0 +1,852 @@
+
+chall:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000000e68 <_init>:
+ e68:	48 83 ec 08          	sub    rsp,0x8
+ e6c:	48 8b 05 75 21 20 00 	mov    rax,QWORD PTR [rip+0x202175]        # 202fe8 <__gmon_start__>
+ e73:	48 85 c0             	test   rax,rax
+ e76:	74 02                	je     e7a <_init+0x12>
+ e78:	ff d0                	call   rax
+ e7a:	48 83 c4 08          	add    rsp,0x8
+ e7e:	c3                   	ret    
+
+Disassembly of section .plt:
+
+0000000000000e80 <.plt>:
+ e80:	ff 35 a2 20 20 00    	push   QWORD PTR [rip+0x2020a2]        # 202f28 <_GLOBAL_OFFSET_TABLE_+0x8>
+ e86:	ff 25 a4 20 20 00    	jmp    QWORD PTR [rip+0x2020a4]        # 202f30 <_GLOBAL_OFFSET_TABLE_+0x10>
+ e8c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+
+0000000000000e90 <std::ostream::operator<<(unsigned long)@plt>:
+ e90:	ff 25 a2 20 20 00    	jmp    QWORD PTR [rip+0x2020a2]        # 202f38 <std::ostream::operator<<(unsigned long)@GLIBCXX_3.4>
+ e96:	68 00 00 00 00       	push   0x0
+ e9b:	e9 e0 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000ea0 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>:
+ ea0:	ff 25 9a 20 20 00    	jmp    QWORD PTR [rip+0x20209a]        # 202f40 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@GLIBCXX_3.4>
+ ea6:	68 01 00 00 00       	push   0x1
+ eab:	e9 d0 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>:
+ eb0:	ff 25 92 20 20 00    	jmp    QWORD PTR [rip+0x202092]        # 202f48 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@GLIBCXX_3.4.21>
+ eb6:	68 02 00 00 00       	push   0x2
+ ebb:	e9 c0 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000ec0 <__cxa_atexit@plt>:
+ ec0:	ff 25 8a 20 20 00    	jmp    QWORD PTR [rip+0x20208a]        # 202f50 <__cxa_atexit@GLIBC_2.2.5>
+ ec6:	68 03 00 00 00       	push   0x3
+ ecb:	e9 b0 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000ed0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@plt>:
+ ed0:	ff 25 82 20 20 00    	jmp    QWORD PTR [rip+0x202082]        # 202f58 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@GLIBCXX_3.4.21>
+ ed6:	68 04 00 00 00       	push   0x4
+ edb:	e9 a0 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000ee0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>:
+ ee0:	ff 25 7a 20 20 00    	jmp    QWORD PTR [rip+0x20207a]        # 202f60 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@GLIBCXX_3.4>
+ ee6:	68 05 00 00 00       	push   0x5
+ eeb:	e9 90 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000ef0 <operator new(unsigned long)@plt>:
+ ef0:	ff 25 72 20 20 00    	jmp    QWORD PTR [rip+0x202072]        # 202f68 <operator new(unsigned long)@GLIBCXX_3.4>
+ ef6:	68 06 00 00 00       	push   0x6
+ efb:	e9 80 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f00 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>:
+ f00:	ff 25 6a 20 20 00    	jmp    QWORD PTR [rip+0x20206a]        # 202f70 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@GLIBCXX_3.4>
+ f06:	68 07 00 00 00       	push   0x7
+ f0b:	e9 70 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f10 <std::allocator<char>::~allocator()@plt>:
+ f10:	ff 25 62 20 20 00    	jmp    QWORD PTR [rip+0x202062]        # 202f78 <std::allocator<char>::~allocator()@GLIBCXX_3.4>
+ f16:	68 08 00 00 00       	push   0x8
+ f1b:	e9 60 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f20 <__stack_chk_fail@plt>:
+ f20:	ff 25 5a 20 20 00    	jmp    QWORD PTR [rip+0x20205a]        # 202f80 <__stack_chk_fail@GLIBC_2.4>
+ f26:	68 09 00 00 00       	push   0x9
+ f2b:	e9 50 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f30 <exit@plt>:
+ f30:	ff 25 52 20 20 00    	jmp    QWORD PTR [rip+0x202052]        # 202f88 <exit@GLIBC_2.2.5>
+ f36:	68 0a 00 00 00       	push   0xa
+ f3b:	e9 40 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f40 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@plt>:
+ f40:	ff 25 4a 20 20 00    	jmp    QWORD PTR [rip+0x20204a]        # 202f90 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@GLIBCXX_3.4.21>
+ f46:	68 0b 00 00 00       	push   0xb
+ f4b:	e9 30 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f50 <std::istream::operator>>(unsigned long&)@plt>:
+ f50:	ff 25 42 20 20 00    	jmp    QWORD PTR [rip+0x202042]        # 202f98 <std::istream::operator>>(unsigned long&)@GLIBCXX_3.4>
+ f56:	68 0c 00 00 00       	push   0xc
+ f5b:	e9 20 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f60 <setbuf@plt>:
+ f60:	ff 25 3a 20 20 00    	jmp    QWORD PTR [rip+0x20203a]        # 202fa0 <setbuf@GLIBC_2.2.5>
+ f66:	68 0d 00 00 00       	push   0xd
+ f6b:	e9 10 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f70 <std::ios_base::Init::Init()@plt>:
+ f70:	ff 25 32 20 20 00    	jmp    QWORD PTR [rip+0x202032]        # 202fa8 <std::ios_base::Init::Init()@GLIBCXX_3.4>
+ f76:	68 0e 00 00 00       	push   0xe
+ f7b:	e9 00 ff ff ff       	jmp    e80 <.plt>
+
+0000000000000f80 <std::basic_ios<char, std::char_traits<char> >::good() const@plt>:
+ f80:	ff 25 2a 20 20 00    	jmp    QWORD PTR [rip+0x20202a]        # 202fb0 <std::basic_ios<char, std::char_traits<char> >::good() const@GLIBCXX_3.4>
+ f86:	68 0f 00 00 00       	push   0xf
+ f8b:	e9 f0 fe ff ff       	jmp    e80 <.plt>
+
+0000000000000f90 <_Unwind_Resume@plt>:
+ f90:	ff 25 22 20 20 00    	jmp    QWORD PTR [rip+0x202022]        # 202fb8 <_Unwind_Resume@GCC_3.0>
+ f96:	68 10 00 00 00       	push   0x10
+ f9b:	e9 e0 fe ff ff       	jmp    e80 <.plt>
+
+0000000000000fa0 <std::allocator<char>::allocator()@plt>:
+ fa0:	ff 25 1a 20 20 00    	jmp    QWORD PTR [rip+0x20201a]        # 202fc0 <std::allocator<char>::allocator()@GLIBCXX_3.4>
+ fa6:	68 11 00 00 00       	push   0x11
+ fab:	e9 d0 fe ff ff       	jmp    e80 <.plt>
+
+Disassembly of section .plt.got:
+
+0000000000000fb0 <__cxa_finalize@plt>:
+ fb0:	ff 25 12 20 20 00    	jmp    QWORD PTR [rip+0x202012]        # 202fc8 <__cxa_finalize@GLIBC_2.2.5>
+ fb6:	66 90                	xchg   ax,ax
+
+Disassembly of section .text:
+
+0000000000000fc0 <_start>:
+     fc0:	31 ed                	xor    ebp,ebp
+     fc2:	49 89 d1             	mov    r9,rdx
+     fc5:	5e                   	pop    rsi
+     fc6:	48 89 e2             	mov    rdx,rsp
+     fc9:	48 83 e4 f0          	and    rsp,0xfffffffffffffff0
+     fcd:	50                   	push   rax
+     fce:	54                   	push   rsp
+     fcf:	4c 8d 05 5a 09 00 00 	lea    r8,[rip+0x95a]        # 1930 <__libc_csu_fini>
+     fd6:	48 8d 0d e3 08 00 00 	lea    rcx,[rip+0x8e3]        # 18c0 <__libc_csu_init>
+     fdd:	48 8d 3d 33 07 00 00 	lea    rdi,[rip+0x733]        # 1717 <main>
+     fe4:	ff 15 f6 1f 20 00    	call   QWORD PTR [rip+0x201ff6]        # 202fe0 <__libc_start_main@GLIBC_2.2.5>
+     fea:	f4                   	hlt    
+     feb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000000ff0 <deregister_tm_clones>:
+     ff0:	48 8d 3d 21 20 20 00 	lea    rdi,[rip+0x202021]        # 203018 <__TMC_END__>
+     ff7:	55                   	push   rbp
+     ff8:	48 8d 05 19 20 20 00 	lea    rax,[rip+0x202019]        # 203018 <__TMC_END__>
+     fff:	48 39 f8             	cmp    rax,rdi
+    1002:	48 89 e5             	mov    rbp,rsp
+    1005:	74 19                	je     1020 <deregister_tm_clones+0x30>
+    1007:	48 8b 05 ca 1f 20 00 	mov    rax,QWORD PTR [rip+0x201fca]        # 202fd8 <_ITM_deregisterTMCloneTable>
+    100e:	48 85 c0             	test   rax,rax
+    1011:	74 0d                	je     1020 <deregister_tm_clones+0x30>
+    1013:	5d                   	pop    rbp
+    1014:	ff e0                	jmp    rax
+    1016:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+    101d:	00 00 00 
+    1020:	5d                   	pop    rbp
+    1021:	c3                   	ret    
+    1022:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+    1026:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+    102d:	00 00 00 
+
+0000000000001030 <register_tm_clones>:
+    1030:	48 8d 3d e1 1f 20 00 	lea    rdi,[rip+0x201fe1]        # 203018 <__TMC_END__>
+    1037:	48 8d 35 da 1f 20 00 	lea    rsi,[rip+0x201fda]        # 203018 <__TMC_END__>
+    103e:	55                   	push   rbp
+    103f:	48 29 fe             	sub    rsi,rdi
+    1042:	48 89 e5             	mov    rbp,rsp
+    1045:	48 c1 fe 03          	sar    rsi,0x3
+    1049:	48 89 f0             	mov    rax,rsi
+    104c:	48 c1 e8 3f          	shr    rax,0x3f
+    1050:	48 01 c6             	add    rsi,rax
+    1053:	48 d1 fe             	sar    rsi,1
+    1056:	74 18                	je     1070 <register_tm_clones+0x40>
+    1058:	48 8b 05 91 1f 20 00 	mov    rax,QWORD PTR [rip+0x201f91]        # 202ff0 <_ITM_registerTMCloneTable>
+    105f:	48 85 c0             	test   rax,rax
+    1062:	74 0c                	je     1070 <register_tm_clones+0x40>
+    1064:	5d                   	pop    rbp
+    1065:	ff e0                	jmp    rax
+    1067:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+    106e:	00 00 
+    1070:	5d                   	pop    rbp
+    1071:	c3                   	ret    
+    1072:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+    1076:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+    107d:	00 00 00 
+
+0000000000001080 <__do_global_dtors_aux>:
+    1080:	80 3d 29 23 20 00 00 	cmp    BYTE PTR [rip+0x202329],0x0        # 2033b0 <completed.7697>
+    1087:	75 2f                	jne    10b8 <__do_global_dtors_aux+0x38>
+    1089:	48 83 3d 37 1f 20 00 	cmp    QWORD PTR [rip+0x201f37],0x0        # 202fc8 <__cxa_finalize@GLIBC_2.2.5>
+    1090:	00 
+    1091:	55                   	push   rbp
+    1092:	48 89 e5             	mov    rbp,rsp
+    1095:	74 0c                	je     10a3 <__do_global_dtors_aux+0x23>
+    1097:	48 8b 3d 6a 1f 20 00 	mov    rdi,QWORD PTR [rip+0x201f6a]        # 203008 <__dso_handle>
+    109e:	e8 0d ff ff ff       	call   fb0 <__cxa_finalize@plt>
+    10a3:	e8 48 ff ff ff       	call   ff0 <deregister_tm_clones>
+    10a8:	c6 05 01 23 20 00 01 	mov    BYTE PTR [rip+0x202301],0x1        # 2033b0 <completed.7697>
+    10af:	5d                   	pop    rbp
+    10b0:	c3                   	ret    
+    10b1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    10b8:	f3 c3                	repz ret 
+    10ba:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+00000000000010c0 <frame_dummy>:
+    10c0:	55                   	push   rbp
+    10c1:	48 89 e5             	mov    rbp,rsp
+    10c4:	5d                   	pop    rbp
+    10c5:	e9 66 ff ff ff       	jmp    1030 <register_tm_clones>
+
+00000000000010ca <Emulator::Emulator()>:
+    10ca:	55                   	push   rbp
+    10cb:	48 89 e5             	mov    rbp,rsp
+    10ce:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+    10d2:	48 8d 15 07 1c 20 00 	lea    rdx,[rip+0x201c07]        # 202ce0 <vtable for Emulator+0x10>
+    10d9:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    10dd:	48 89 10             	mov    QWORD PTR [rax],rdx
+    10e0:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    10e4:	48 c7 40 08 00 00 00 	mov    QWORD PTR [rax+0x8],0x0
+    10eb:	00 
+    10ec:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    10f0:	48 c7 40 10 00 00 00 	mov    QWORD PTR [rax+0x10],0x0
+    10f7:	00 
+    10f8:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    10fc:	48 c7 40 18 00 00 00 	mov    QWORD PTR [rax+0x18],0x0
+    1103:	00 
+    1104:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1108:	48 c7 40 20 00 00 00 	mov    QWORD PTR [rax+0x20],0x0
+    110f:	00 
+    1110:	90                   	nop
+    1111:	5d                   	pop    rbp
+    1112:	c3                   	ret    
+    1113:	90                   	nop
+
+0000000000001114 <Emulator::set(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long&)>:
+    1114:	55                   	push   rbp
+    1115:	48 89 e5             	mov    rbp,rsp
+    1118:	48 83 ec 20          	sub    rsp,0x20
+    111c:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+    1120:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+    1124:	48 89 55 e8          	mov    QWORD PTR [rbp-0x18],rdx
+    1128:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+    112c:	48 89 c6             	mov    rsi,rax
+    112f:	48 8d 3d 0a 1f 20 00 	lea    rdi,[rip+0x201f0a]        # 203040 <std::cout@@GLIBCXX_3.4>
+    1136:	e8 95 fd ff ff       	call   ed0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@plt>
+    113b:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    113f:	48 89 c6             	mov    rsi,rax
+    1142:	48 8d 3d 37 20 20 00 	lea    rdi,[rip+0x202037]        # 203180 <std::cin@@GLIBCXX_3.4>
+    1149:	e8 02 fe ff ff       	call   f50 <std::istream::operator>>(unsigned long&)@plt>
+    114e:	48 8d 3d 3b 20 20 00 	lea    rdi,[rip+0x20203b]        # 203190 <std::cin@@GLIBCXX_3.4+0x10>
+    1155:	e8 26 fe ff ff       	call   f80 <std::basic_ios<char, std::char_traits<char> >::good() const@plt>
+    115a:	83 f0 01             	xor    eax,0x1
+    115d:	84 c0                	test   al,al
+    115f:	74 0a                	je     116b <Emulator::set(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long&)+0x57>
+    1161:	bf 01 00 00 00       	mov    edi,0x1
+    1166:	e8 c5 fd ff ff       	call   f30 <exit@plt>
+    116b:	90                   	nop
+    116c:	c9                   	leave  
+    116d:	c3                   	ret    
+
+000000000000116e <Emulator::check()>:
+    116e:	55                   	push   rbp
+    116f:	48 89 e5             	mov    rbp,rsp
+    1172:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+    1176:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    117a:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    117e:	48 3d ff ff ff 3f    	cmp    rax,0x3fffffff
+    1184:	76 0a                	jbe    1190 <Emulator::check()+0x22>
+    1186:	b8 01 00 00 00       	mov    eax,0x1
+    118b:	e9 fe 00 00 00       	jmp    128e <Emulator::check()+0x120>
+    1190:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1194:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    1198:	48 83 f8 02          	cmp    rax,0x2
+    119c:	75 0a                	jne    11a8 <Emulator::check()+0x3a>
+    119e:	b8 01 00 00 00       	mov    eax,0x1
+    11a3:	e9 e6 00 00 00       	jmp    128e <Emulator::check()+0x120>
+    11a8:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    11ac:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    11b0:	48 3d 01 01 00 00    	cmp    rax,0x101
+    11b6:	75 0a                	jne    11c2 <Emulator::check()+0x54>
+    11b8:	b8 01 00 00 00       	mov    eax,0x1
+    11bd:	e9 cc 00 00 00       	jmp    128e <Emulator::check()+0x120>
+    11c2:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    11c6:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    11ca:	48 83 f8 01          	cmp    rax,0x1
+    11ce:	75 0a                	jne    11da <Emulator::check()+0x6c>
+    11d0:	b8 01 00 00 00       	mov    eax,0x1
+    11d5:	e9 b4 00 00 00       	jmp    128e <Emulator::check()+0x120>
+    11da:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    11de:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    11e2:	48 85 c0             	test   rax,rax
+    11e5:	75 0a                	jne    11f1 <Emulator::check()+0x83>
+    11e7:	b8 01 00 00 00       	mov    eax,0x1
+    11ec:	e9 9d 00 00 00       	jmp    128e <Emulator::check()+0x120>
+    11f1:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    11f5:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    11f9:	48 83 f8 28          	cmp    rax,0x28
+    11fd:	75 0a                	jne    1209 <Emulator::check()+0x9b>
+    11ff:	b8 01 00 00 00       	mov    eax,0x1
+    1204:	e9 85 00 00 00       	jmp    128e <Emulator::check()+0x120>
+    1209:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    120d:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    1211:	48 83 f8 3b          	cmp    rax,0x3b
+    1215:	75 07                	jne    121e <Emulator::check()+0xb0>
+    1217:	b8 01 00 00 00       	mov    eax,0x1
+    121c:	eb 70                	jmp    128e <Emulator::check()+0x120>
+    121e:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1222:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    1226:	48 3d 42 01 00 00    	cmp    rax,0x142
+    122c:	75 07                	jne    1235 <Emulator::check()+0xc7>
+    122e:	b8 01 00 00 00       	mov    eax,0x1
+    1233:	eb 59                	jmp    128e <Emulator::check()+0x120>
+    1235:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1239:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    123d:	48 83 f8 65          	cmp    rax,0x65
+    1241:	75 07                	jne    124a <Emulator::check()+0xdc>
+    1243:	b8 01 00 00 00       	mov    eax,0x1
+    1248:	eb 44                	jmp    128e <Emulator::check()+0x120>
+    124a:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    124e:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    1252:	48 83 f8 39          	cmp    rax,0x39
+    1256:	75 07                	jne    125f <Emulator::check()+0xf1>
+    1258:	b8 01 00 00 00       	mov    eax,0x1
+    125d:	eb 2f                	jmp    128e <Emulator::check()+0x120>
+    125f:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1263:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    1267:	48 83 f8 3a          	cmp    rax,0x3a
+    126b:	75 07                	jne    1274 <Emulator::check()+0x106>
+    126d:	b8 01 00 00 00       	mov    eax,0x1
+    1272:	eb 1a                	jmp    128e <Emulator::check()+0x120>
+    1274:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1278:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    127c:	48 83 f8 38          	cmp    rax,0x38
+    1280:	75 07                	jne    1289 <Emulator::check()+0x11b>
+    1282:	b8 01 00 00 00       	mov    eax,0x1
+    1287:	eb 05                	jmp    128e <Emulator::check()+0x120>
+    1289:	b8 00 00 00 00       	mov    eax,0x0
+    128e:	5d                   	pop    rbp
+    128f:	c3                   	ret    
+
+0000000000001290 <Emulator::syscall()>:
+    1290:	55                   	push   rbp
+    1291:	48 89 e5             	mov    rbp,rsp
+    1294:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+    1298:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    129c:	48 8b 40 10          	mov    rax,QWORD PTR [rax+0x10]
+    12a0:	48 89 c7             	mov    rdi,rax
+    12a3:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    12a7:	48 8b 40 18          	mov    rax,QWORD PTR [rax+0x18]
+    12ab:	48 89 c6             	mov    rsi,rax
+    12ae:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    12b2:	48 8b 40 20          	mov    rax,QWORD PTR [rax+0x20]
+    12b6:	48 89 c2             	mov    rdx,rax
+    12b9:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    12bd:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    12c1:	48 89 c0             	mov    rax,rax
+    12c4:	0f 05                	syscall 
+    12c6:	48 89 c0             	mov    rax,rax
+    12c9:	48 89 c2             	mov    rdx,rax
+    12cc:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    12d0:	48 89 50 08          	mov    QWORD PTR [rax+0x8],rdx
+    12d4:	90                   	nop
+    12d5:	5d                   	pop    rbp
+    12d6:	c3                   	ret    
+    12d7:	90                   	nop
+
+00000000000012d8 <Emulator::emulate()>:
+    12d8:	55                   	push   rbp
+    12d9:	48 89 e5             	mov    rbp,rsp
+    12dc:	41 54                	push   r12
+    12de:	53                   	push   rbx
+    12df:	48 83 ec 50          	sub    rsp,0x50
+    12e3:	48 89 7d a8          	mov    QWORD PTR [rbp-0x58],rdi
+    12e7:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+    12ee:	00 00 
+    12f0:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+    12f4:	31 c0                	xor    eax,eax
+    12f6:	c7 45 bc 00 00 00 00 	mov    DWORD PTR [rbp-0x44],0x0
+    12fd:	83 7d bc 09          	cmp    DWORD PTR [rbp-0x44],0x9
+    1301:	0f 8f ac 02 00 00    	jg     15b3 <Emulator::emulate()+0x2db>
+    1307:	48 8d 35 37 06 00 00 	lea    rsi,[rip+0x637]        # 1945 <std::piecewise_construct+0x1>
+    130e:	48 8d 3d 2b 1d 20 00 	lea    rdi,[rip+0x201d2b]        # 203040 <std::cout@@GLIBCXX_3.4>
+    1315:	e8 c6 fb ff ff       	call   ee0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    131a:	48 89 c2             	mov    rdx,rax
+    131d:	48 8b 05 ac 1c 20 00 	mov    rax,QWORD PTR [rip+0x201cac]        # 202fd0 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    1324:	48 89 c6             	mov    rsi,rax
+    1327:	48 89 d7             	mov    rdi,rdx
+    132a:	e8 d1 fb ff ff       	call   f00 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    132f:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    1333:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    1336:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+    1339:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    133d:	4c 8d 60 08          	lea    r12,[rax+0x8]
+    1341:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    1345:	48 89 c7             	mov    rdi,rax
+    1348:	e8 53 fc ff ff       	call   fa0 <std::allocator<char>::allocator()@plt>
+    134d:	48 8d 55 bb          	lea    rdx,[rbp-0x45]
+    1351:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    1355:	48 8d 35 03 06 00 00 	lea    rsi,[rip+0x603]        # 195f <std::piecewise_construct+0x1b>
+    135c:	48 89 c7             	mov    rdi,rax
+    135f:	e8 dc fb ff ff       	call   f40 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@plt>
+    1364:	48 8d 4d c0          	lea    rcx,[rbp-0x40]
+    1368:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    136c:	4c 89 e2             	mov    rdx,r12
+    136f:	48 89 ce             	mov    rsi,rcx
+    1372:	48 89 c7             	mov    rdi,rax
+    1375:	ff d3                	call   rbx
+    1377:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    137b:	48 89 c7             	mov    rdi,rax
+    137e:	e8 2d fb ff ff       	call   eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+    1383:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    1387:	48 89 c7             	mov    rdi,rax
+    138a:	e8 81 fb ff ff       	call   f10 <std::allocator<char>::~allocator()@plt>
+    138f:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    1393:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    1396:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+    1399:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    139d:	4c 8d 60 10          	lea    r12,[rax+0x10]
+    13a1:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    13a5:	48 89 c7             	mov    rdi,rax
+    13a8:	e8 f3 fb ff ff       	call   fa0 <std::allocator<char>::allocator()@plt>
+    13ad:	48 8d 55 bb          	lea    rdx,[rbp-0x45]
+    13b1:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    13b5:	48 8d 35 ad 05 00 00 	lea    rsi,[rip+0x5ad]        # 1969 <std::piecewise_construct+0x25>
+    13bc:	48 89 c7             	mov    rdi,rax
+    13bf:	e8 7c fb ff ff       	call   f40 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@plt>
+    13c4:	48 8d 4d c0          	lea    rcx,[rbp-0x40]
+    13c8:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    13cc:	4c 89 e2             	mov    rdx,r12
+    13cf:	48 89 ce             	mov    rsi,rcx
+    13d2:	48 89 c7             	mov    rdi,rax
+    13d5:	ff d3                	call   rbx
+    13d7:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    13db:	48 89 c7             	mov    rdi,rax
+    13de:	e8 cd fa ff ff       	call   eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+    13e3:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    13e7:	48 89 c7             	mov    rdi,rax
+    13ea:	e8 21 fb ff ff       	call   f10 <std::allocator<char>::~allocator()@plt>
+    13ef:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    13f3:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    13f6:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+    13f9:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    13fd:	4c 8d 60 18          	lea    r12,[rax+0x18]
+    1401:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    1405:	48 89 c7             	mov    rdi,rax
+    1408:	e8 93 fb ff ff       	call   fa0 <std::allocator<char>::allocator()@plt>
+    140d:	48 8d 55 bb          	lea    rdx,[rbp-0x45]
+    1411:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    1415:	48 8d 35 54 05 00 00 	lea    rsi,[rip+0x554]        # 1970 <std::piecewise_construct+0x2c>
+    141c:	48 89 c7             	mov    rdi,rax
+    141f:	e8 1c fb ff ff       	call   f40 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@plt>
+    1424:	48 8d 4d c0          	lea    rcx,[rbp-0x40]
+    1428:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    142c:	4c 89 e2             	mov    rdx,r12
+    142f:	48 89 ce             	mov    rsi,rcx
+    1432:	48 89 c7             	mov    rdi,rax
+    1435:	ff d3                	call   rbx
+    1437:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    143b:	48 89 c7             	mov    rdi,rax
+    143e:	e8 6d fa ff ff       	call   eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+    1443:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    1447:	48 89 c7             	mov    rdi,rax
+    144a:	e8 c1 fa ff ff       	call   f10 <std::allocator<char>::~allocator()@plt>
+    144f:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    1453:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    1456:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+    1459:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    145d:	4c 8d 60 20          	lea    r12,[rax+0x20]
+    1461:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    1465:	48 89 c7             	mov    rdi,rax
+    1468:	e8 33 fb ff ff       	call   fa0 <std::allocator<char>::allocator()@plt>
+    146d:	48 8d 55 bb          	lea    rdx,[rbp-0x45]
+    1471:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    1475:	48 8d 35 fb 04 00 00 	lea    rsi,[rip+0x4fb]        # 1977 <std::piecewise_construct+0x33>
+    147c:	48 89 c7             	mov    rdi,rax
+    147f:	e8 bc fa ff ff       	call   f40 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@plt>
+    1484:	48 8d 4d c0          	lea    rcx,[rbp-0x40]
+    1488:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    148c:	4c 89 e2             	mov    rdx,r12
+    148f:	48 89 ce             	mov    rsi,rcx
+    1492:	48 89 c7             	mov    rdi,rax
+    1495:	ff d3                	call   rbx
+    1497:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    149b:	48 89 c7             	mov    rdi,rax
+    149e:	e8 0d fa ff ff       	call   eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+    14a3:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    14a7:	48 89 c7             	mov    rdi,rax
+    14aa:	e8 61 fa ff ff       	call   f10 <std::allocator<char>::~allocator()@plt>
+    14af:	48 8d 35 8f 04 00 00 	lea    rsi,[rip+0x48f]        # 1945 <std::piecewise_construct+0x1>
+    14b6:	48 8d 3d 83 1b 20 00 	lea    rdi,[rip+0x201b83]        # 203040 <std::cout@@GLIBCXX_3.4>
+    14bd:	e8 1e fa ff ff       	call   ee0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    14c2:	48 89 c2             	mov    rdx,rax
+    14c5:	48 8b 05 04 1b 20 00 	mov    rax,QWORD PTR [rip+0x201b04]        # 202fd0 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    14cc:	48 89 c6             	mov    rsi,rax
+    14cf:	48 89 d7             	mov    rdi,rdx
+    14d2:	e8 29 fa ff ff       	call   f00 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    14d7:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    14db:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    14de:	48 83 c0 08          	add    rax,0x8
+    14e2:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    14e5:	48 8b 55 a8          	mov    rdx,QWORD PTR [rbp-0x58]
+    14e9:	48 89 d7             	mov    rdi,rdx
+    14ec:	ff d0                	call   rax
+    14ee:	85 c0                	test   eax,eax
+    14f0:	0f 95 c0             	setne  al
+    14f3:	84 c0                	test   al,al
+    14f5:	74 4f                	je     1546 <Emulator::emulate()+0x26e>
+    14f7:	48 8d 35 80 04 00 00 	lea    rsi,[rip+0x480]        # 197e <std::piecewise_construct+0x3a>
+    14fe:	48 8d 3d 9b 1d 20 00 	lea    rdi,[rip+0x201d9b]        # 2032a0 <std::cerr@@GLIBCXX_3.4>
+    1505:	e8 d6 f9 ff ff       	call   ee0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    150a:	48 89 c2             	mov    rdx,rax
+    150d:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    1511:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    1515:	48 89 c6             	mov    rsi,rax
+    1518:	48 89 d7             	mov    rdi,rdx
+    151b:	e8 70 f9 ff ff       	call   e90 <std::ostream::operator<<(unsigned long)@plt>
+    1520:	48 8d 35 60 04 00 00 	lea    rsi,[rip+0x460]        # 1987 <std::piecewise_construct+0x43>
+    1527:	48 89 c7             	mov    rdi,rax
+    152a:	e8 b1 f9 ff ff       	call   ee0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    152f:	48 89 c2             	mov    rdx,rax
+    1532:	48 8b 05 97 1a 20 00 	mov    rax,QWORD PTR [rip+0x201a97]        # 202fd0 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    1539:	48 89 c6             	mov    rsi,rax
+    153c:	48 89 d7             	mov    rdi,rdx
+    153f:	e8 bc f9 ff ff       	call   f00 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    1544:	eb 64                	jmp    15aa <Emulator::emulate()+0x2d2>
+    1546:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    154a:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    154d:	48 83 c0 10          	add    rax,0x10
+    1551:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    1554:	48 8b 55 a8          	mov    rdx,QWORD PTR [rbp-0x58]
+    1558:	48 89 d7             	mov    rdi,rdx
+    155b:	ff d0                	call   rax
+    155d:	48 8d 35 33 04 00 00 	lea    rsi,[rip+0x433]        # 1997 <std::piecewise_construct+0x53>
+    1564:	48 8d 3d d5 1a 20 00 	lea    rdi,[rip+0x201ad5]        # 203040 <std::cout@@GLIBCXX_3.4>
+    156b:	e8 70 f9 ff ff       	call   ee0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    1570:	48 8d 35 21 03 00 00 	lea    rsi,[rip+0x321]        # 1898 <std::hex(std::ios_base&)>
+    1577:	48 89 c7             	mov    rdi,rax
+    157a:	e8 21 f9 ff ff       	call   ea0 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    157f:	48 89 c2             	mov    rdx,rax
+    1582:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+    1586:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    158a:	48 89 c6             	mov    rsi,rax
+    158d:	48 89 d7             	mov    rdi,rdx
+    1590:	e8 fb f8 ff ff       	call   e90 <std::ostream::operator<<(unsigned long)@plt>
+    1595:	48 89 c2             	mov    rdx,rax
+    1598:	48 8b 05 31 1a 20 00 	mov    rax,QWORD PTR [rip+0x201a31]        # 202fd0 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    159f:	48 89 c6             	mov    rsi,rax
+    15a2:	48 89 d7             	mov    rdi,rdx
+    15a5:	e8 56 f9 ff ff       	call   f00 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    15aa:	83 45 bc 01          	add    DWORD PTR [rbp-0x44],0x1
+    15ae:	e9 4a fd ff ff       	jmp    12fd <Emulator::emulate()+0x25>
+    15b3:	48 8d 35 e6 03 00 00 	lea    rsi,[rip+0x3e6]        # 19a0 <std::piecewise_construct+0x5c>
+    15ba:	48 8d 3d 7f 1a 20 00 	lea    rdi,[rip+0x201a7f]        # 203040 <std::cout@@GLIBCXX_3.4>
+    15c1:	e8 1a f9 ff ff       	call   ee0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    15c6:	48 89 c2             	mov    rdx,rax
+    15c9:	48 8b 05 00 1a 20 00 	mov    rax,QWORD PTR [rip+0x201a00]        # 202fd0 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    15d0:	48 89 c6             	mov    rsi,rax
+    15d3:	48 89 d7             	mov    rdi,rdx
+    15d6:	e8 25 f9 ff ff       	call   f00 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    15db:	90                   	nop
+    15dc:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    15e0:	64 48 33 04 25 28 00 	xor    rax,QWORD PTR fs:0x28
+    15e7:	00 00 
+    15e9:	0f 84 b6 00 00 00    	je     16a5 <Emulator::emulate()+0x3cd>
+    15ef:	e9 ac 00 00 00       	jmp    16a0 <Emulator::emulate()+0x3c8>
+    15f4:	48 89 c3             	mov    rbx,rax
+    15f7:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    15fb:	48 89 c7             	mov    rdi,rax
+    15fe:	e8 ad f8 ff ff       	call   eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+    1603:	eb 03                	jmp    1608 <Emulator::emulate()+0x330>
+    1605:	48 89 c3             	mov    rbx,rax
+    1608:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    160c:	48 89 c7             	mov    rdi,rax
+    160f:	e8 fc f8 ff ff       	call   f10 <std::allocator<char>::~allocator()@plt>
+    1614:	48 89 d8             	mov    rax,rbx
+    1617:	48 89 c7             	mov    rdi,rax
+    161a:	e8 71 f9 ff ff       	call   f90 <_Unwind_Resume@plt>
+    161f:	48 89 c3             	mov    rbx,rax
+    1622:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    1626:	48 89 c7             	mov    rdi,rax
+    1629:	e8 82 f8 ff ff       	call   eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+    162e:	eb 03                	jmp    1633 <Emulator::emulate()+0x35b>
+    1630:	48 89 c3             	mov    rbx,rax
+    1633:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    1637:	48 89 c7             	mov    rdi,rax
+    163a:	e8 d1 f8 ff ff       	call   f10 <std::allocator<char>::~allocator()@plt>
+    163f:	48 89 d8             	mov    rax,rbx
+    1642:	48 89 c7             	mov    rdi,rax
+    1645:	e8 46 f9 ff ff       	call   f90 <_Unwind_Resume@plt>
+    164a:	48 89 c3             	mov    rbx,rax
+    164d:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    1651:	48 89 c7             	mov    rdi,rax
+    1654:	e8 57 f8 ff ff       	call   eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+    1659:	eb 03                	jmp    165e <Emulator::emulate()+0x386>
+    165b:	48 89 c3             	mov    rbx,rax
+    165e:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    1662:	48 89 c7             	mov    rdi,rax
+    1665:	e8 a6 f8 ff ff       	call   f10 <std::allocator<char>::~allocator()@plt>
+    166a:	48 89 d8             	mov    rax,rbx
+    166d:	48 89 c7             	mov    rdi,rax
+    1670:	e8 1b f9 ff ff       	call   f90 <_Unwind_Resume@plt>
+    1675:	48 89 c3             	mov    rbx,rax
+    1678:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+    167c:	48 89 c7             	mov    rdi,rax
+    167f:	e8 2c f8 ff ff       	call   eb0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+    1684:	eb 03                	jmp    1689 <Emulator::emulate()+0x3b1>
+    1686:	48 89 c3             	mov    rbx,rax
+    1689:	48 8d 45 bb          	lea    rax,[rbp-0x45]
+    168d:	48 89 c7             	mov    rdi,rax
+    1690:	e8 7b f8 ff ff       	call   f10 <std::allocator<char>::~allocator()@plt>
+    1695:	48 89 d8             	mov    rax,rbx
+    1698:	48 89 c7             	mov    rdi,rax
+    169b:	e8 f0 f8 ff ff       	call   f90 <_Unwind_Resume@plt>
+    16a0:	e8 7b f8 ff ff       	call   f20 <__stack_chk_fail@plt>
+    16a5:	48 83 c4 50          	add    rsp,0x50
+    16a9:	5b                   	pop    rbx
+    16aa:	41 5c                	pop    r12
+    16ac:	5d                   	pop    rbp
+    16ad:	c3                   	ret    
+
+00000000000016ae <setup()>:
+    16ae:	55                   	push   rbp
+    16af:	48 89 e5             	mov    rbp,rsp
+    16b2:	53                   	push   rbx
+    16b3:	48 83 ec 08          	sub    rsp,0x8
+    16b7:	48 8b 05 72 19 20 00 	mov    rax,QWORD PTR [rip+0x201972]        # 203030 <stdin@@GLIBC_2.2.5>
+    16be:	be 00 00 00 00       	mov    esi,0x0
+    16c3:	48 89 c7             	mov    rdi,rax
+    16c6:	e8 95 f8 ff ff       	call   f60 <setbuf@plt>
+    16cb:	48 8b 05 4e 19 20 00 	mov    rax,QWORD PTR [rip+0x20194e]        # 203020 <stdout@@GLIBC_2.2.5>
+    16d2:	be 00 00 00 00       	mov    esi,0x0
+    16d7:	48 89 c7             	mov    rdi,rax
+    16da:	e8 81 f8 ff ff       	call   f60 <setbuf@plt>
+    16df:	48 8b 05 7a 1a 20 00 	mov    rax,QWORD PTR [rip+0x201a7a]        # 203160 <stderr@@GLIBC_2.2.5>
+    16e6:	be 00 00 00 00       	mov    esi,0x0
+    16eb:	48 89 c7             	mov    rdi,rax
+    16ee:	e8 6d f8 ff ff       	call   f60 <setbuf@plt>
+    16f3:	bf 28 00 00 00       	mov    edi,0x28
+    16f8:	e8 f3 f7 ff ff       	call   ef0 <operator new(unsigned long)@plt>
+    16fd:	48 89 c3             	mov    rbx,rax
+    1700:	48 89 df             	mov    rdi,rbx
+    1703:	e8 c2 f9 ff ff       	call   10ca <Emulator::Emulator()>
+    1708:	48 89 1d a9 1c 20 00 	mov    QWORD PTR [rip+0x201ca9],rbx        # 2033b8 <m>
+    170f:	90                   	nop
+    1710:	48 83 c4 08          	add    rsp,0x8
+    1714:	5b                   	pop    rbx
+    1715:	5d                   	pop    rbp
+    1716:	c3                   	ret    
+
+0000000000001717 <main>:
+    1717:	55                   	push   rbp
+    1718:	48 89 e5             	mov    rbp,rsp
+    171b:	e8 8e ff ff ff       	call   16ae <setup()>
+    1720:	48 8b 15 91 1c 20 00 	mov    rdx,QWORD PTR [rip+0x201c91]        # 2033b8 <m>
+    1727:	48 8b 05 8a 1c 20 00 	mov    rax,QWORD PTR [rip+0x201c8a]        # 2033b8 <m>
+    172e:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    1731:	48 83 c0 18          	add    rax,0x18
+    1735:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    1738:	48 89 d7             	mov    rdi,rdx
+    173b:	ff d0                	call   rax
+    173d:	bf 00 00 00 00       	mov    edi,0x0
+    1742:	e8 e9 f7 ff ff       	call   f30 <exit@plt>
+
+0000000000001747 <__static_initialization_and_destruction_0(int, int)>:
+    1747:	55                   	push   rbp
+    1748:	48 89 e5             	mov    rbp,rsp
+    174b:	48 83 ec 10          	sub    rsp,0x10
+    174f:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+    1752:	89 75 f8             	mov    DWORD PTR [rbp-0x8],esi
+    1755:	83 7d fc 01          	cmp    DWORD PTR [rbp-0x4],0x1
+    1759:	75 32                	jne    178d <__static_initialization_and_destruction_0(int, int)+0x46>
+    175b:	81 7d f8 ff ff 00 00 	cmp    DWORD PTR [rbp-0x8],0xffff
+    1762:	75 29                	jne    178d <__static_initialization_and_destruction_0(int, int)+0x46>
+    1764:	48 8d 3d 55 1c 20 00 	lea    rdi,[rip+0x201c55]        # 2033c0 <std::__ioinit>
+    176b:	e8 00 f8 ff ff       	call   f70 <std::ios_base::Init::Init()@plt>
+    1770:	48 8d 15 91 18 20 00 	lea    rdx,[rip+0x201891]        # 203008 <__dso_handle>
+    1777:	48 8d 35 42 1c 20 00 	lea    rsi,[rip+0x201c42]        # 2033c0 <std::__ioinit>
+    177e:	48 8b 05 73 18 20 00 	mov    rax,QWORD PTR [rip+0x201873]        # 202ff8 <std::ios_base::Init::~Init()@GLIBCXX_3.4>
+    1785:	48 89 c7             	mov    rdi,rax
+    1788:	e8 33 f7 ff ff       	call   ec0 <__cxa_atexit@plt>
+    178d:	90                   	nop
+    178e:	c9                   	leave  
+    178f:	c3                   	ret    
+
+0000000000001790 <_GLOBAL__sub_I__ZN8EmulatorC2Ev>:
+    1790:	55                   	push   rbp
+    1791:	48 89 e5             	mov    rbp,rsp
+    1794:	be ff ff 00 00       	mov    esi,0xffff
+    1799:	bf 01 00 00 00       	mov    edi,0x1
+    179e:	e8 a4 ff ff ff       	call   1747 <__static_initialization_and_destruction_0(int, int)>
+    17a3:	5d                   	pop    rbp
+    17a4:	c3                   	ret    
+
+00000000000017a5 <std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>:
+    17a5:	55                   	push   rbp
+    17a6:	48 89 e5             	mov    rbp,rsp
+    17a9:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+    17ac:	89 75 f8             	mov    DWORD PTR [rbp-0x8],esi
+    17af:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    17b2:	23 45 f8             	and    eax,DWORD PTR [rbp-0x8]
+    17b5:	5d                   	pop    rbp
+    17b6:	c3                   	ret    
+
+00000000000017b7 <std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>:
+    17b7:	55                   	push   rbp
+    17b8:	48 89 e5             	mov    rbp,rsp
+    17bb:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+    17be:	89 75 f8             	mov    DWORD PTR [rbp-0x8],esi
+    17c1:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    17c4:	0b 45 f8             	or     eax,DWORD PTR [rbp-0x8]
+    17c7:	5d                   	pop    rbp
+    17c8:	c3                   	ret    
+
+00000000000017c9 <std::operator~(std::_Ios_Fmtflags)>:
+    17c9:	55                   	push   rbp
+    17ca:	48 89 e5             	mov    rbp,rsp
+    17cd:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+    17d0:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    17d3:	f7 d0                	not    eax
+    17d5:	5d                   	pop    rbp
+    17d6:	c3                   	ret    
+
+00000000000017d7 <std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)>:
+    17d7:	55                   	push   rbp
+    17d8:	48 89 e5             	mov    rbp,rsp
+    17db:	48 83 ec 10          	sub    rsp,0x10
+    17df:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+    17e3:	89 75 f4             	mov    DWORD PTR [rbp-0xc],esi
+    17e6:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    17ea:	8b 00                	mov    eax,DWORD PTR [rax]
+    17ec:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+    17ef:	89 d6                	mov    esi,edx
+    17f1:	89 c7                	mov    edi,eax
+    17f3:	e8 bf ff ff ff       	call   17b7 <std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>
+    17f8:	89 c2                	mov    edx,eax
+    17fa:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    17fe:	89 10                	mov    DWORD PTR [rax],edx
+    1800:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1804:	c9                   	leave  
+    1805:	c3                   	ret    
+
+0000000000001806 <std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)>:
+    1806:	55                   	push   rbp
+    1807:	48 89 e5             	mov    rbp,rsp
+    180a:	48 83 ec 10          	sub    rsp,0x10
+    180e:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+    1812:	89 75 f4             	mov    DWORD PTR [rbp-0xc],esi
+    1815:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1819:	8b 00                	mov    eax,DWORD PTR [rax]
+    181b:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+    181e:	89 d6                	mov    esi,edx
+    1820:	89 c7                	mov    edi,eax
+    1822:	e8 7e ff ff ff       	call   17a5 <std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>
+    1827:	89 c2                	mov    edx,eax
+    1829:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    182d:	89 10                	mov    DWORD PTR [rax],edx
+    182f:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1833:	c9                   	leave  
+    1834:	c3                   	ret    
+    1835:	90                   	nop
+
+0000000000001836 <std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>:
+    1836:	55                   	push   rbp
+    1837:	48 89 e5             	mov    rbp,rsp
+    183a:	48 83 ec 20          	sub    rsp,0x20
+    183e:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+    1842:	89 75 e4             	mov    DWORD PTR [rbp-0x1c],esi
+    1845:	89 55 e0             	mov    DWORD PTR [rbp-0x20],edx
+    1848:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    184c:	8b 40 18             	mov    eax,DWORD PTR [rax+0x18]
+    184f:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+    1852:	8b 45 e0             	mov    eax,DWORD PTR [rbp-0x20]
+    1855:	89 c7                	mov    edi,eax
+    1857:	e8 6d ff ff ff       	call   17c9 <std::operator~(std::_Ios_Fmtflags)>
+    185c:	89 c2                	mov    edx,eax
+    185e:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    1862:	48 83 c0 18          	add    rax,0x18
+    1866:	89 d6                	mov    esi,edx
+    1868:	48 89 c7             	mov    rdi,rax
+    186b:	e8 96 ff ff ff       	call   1806 <std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)>
+    1870:	8b 55 e0             	mov    edx,DWORD PTR [rbp-0x20]
+    1873:	8b 45 e4             	mov    eax,DWORD PTR [rbp-0x1c]
+    1876:	89 d6                	mov    esi,edx
+    1878:	89 c7                	mov    edi,eax
+    187a:	e8 26 ff ff ff       	call   17a5 <std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>
+    187f:	89 c2                	mov    edx,eax
+    1881:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    1885:	48 83 c0 18          	add    rax,0x18
+    1889:	89 d6                	mov    esi,edx
+    188b:	48 89 c7             	mov    rdi,rax
+    188e:	e8 44 ff ff ff       	call   17d7 <std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)>
+    1893:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    1896:	c9                   	leave  
+    1897:	c3                   	ret    
+
+0000000000001898 <std::hex(std::ios_base&)>:
+    1898:	55                   	push   rbp
+    1899:	48 89 e5             	mov    rbp,rsp
+    189c:	48 83 ec 10          	sub    rsp,0x10
+    18a0:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+    18a4:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    18a8:	ba 4a 00 00 00       	mov    edx,0x4a
+    18ad:	be 08 00 00 00       	mov    esi,0x8
+    18b2:	48 89 c7             	mov    rdi,rax
+    18b5:	e8 7c ff ff ff       	call   1836 <std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>
+    18ba:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    18be:	c9                   	leave  
+    18bf:	c3                   	ret    
+
+00000000000018c0 <__libc_csu_init>:
+    18c0:	41 57                	push   r15
+    18c2:	41 56                	push   r14
+    18c4:	49 89 d7             	mov    r15,rdx
+    18c7:	41 55                	push   r13
+    18c9:	41 54                	push   r12
+    18cb:	4c 8d 25 e6 13 20 00 	lea    r12,[rip+0x2013e6]        # 202cb8 <__frame_dummy_init_array_entry>
+    18d2:	55                   	push   rbp
+    18d3:	48 8d 2d ee 13 20 00 	lea    rbp,[rip+0x2013ee]        # 202cc8 <__init_array_end>
+    18da:	53                   	push   rbx
+    18db:	41 89 fd             	mov    r13d,edi
+    18de:	49 89 f6             	mov    r14,rsi
+    18e1:	4c 29 e5             	sub    rbp,r12
+    18e4:	48 83 ec 08          	sub    rsp,0x8
+    18e8:	48 c1 fd 03          	sar    rbp,0x3
+    18ec:	e8 77 f5 ff ff       	call   e68 <_init>
+    18f1:	48 85 ed             	test   rbp,rbp
+    18f4:	74 20                	je     1916 <__libc_csu_init+0x56>
+    18f6:	31 db                	xor    ebx,ebx
+    18f8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+    18ff:	00 
+    1900:	4c 89 fa             	mov    rdx,r15
+    1903:	4c 89 f6             	mov    rsi,r14
+    1906:	44 89 ef             	mov    edi,r13d
+    1909:	41 ff 14 dc          	call   QWORD PTR [r12+rbx*8]
+    190d:	48 83 c3 01          	add    rbx,0x1
+    1911:	48 39 dd             	cmp    rbp,rbx
+    1914:	75 ea                	jne    1900 <__libc_csu_init+0x40>
+    1916:	48 83 c4 08          	add    rsp,0x8
+    191a:	5b                   	pop    rbx
+    191b:	5d                   	pop    rbp
+    191c:	41 5c                	pop    r12
+    191e:	41 5d                	pop    r13
+    1920:	41 5e                	pop    r14
+    1922:	41 5f                	pop    r15
+    1924:	c3                   	ret    
+    1925:	90                   	nop
+    1926:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+    192d:	00 00 00 
+
+0000000000001930 <__libc_csu_fini>:
+    1930:	f3 c3                	repz ret 
+
+Disassembly of section .fini:
+
+0000000000001934 <_fini>:
+    1934:	48 83 ec 08          	sub    rsp,0x8
+    1938:	48 83 c4 08          	add    rsp,0x8
+    193c:	c3                   	ret    

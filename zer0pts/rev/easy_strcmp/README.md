@@ -49,9 +49,9 @@ puts("Wrong!"Wrong!
 Return value is -10.
 So first word of flag is "l" ("b"+10).
 
-Like that, I check the word of flag one by one.
+Like that, I checked all word of flag one by one.
 
-flag{zer0pts{l3ts\_m4k3\_4\_DETOUR\_t0d4y}}
+flag: zer0pts{l3ts\_m4k3\_4\_DETOUR\_t0d4y}
 
 ## Reference
 official writeup: https://hackmd.io/@theoldmoon0602/HJlUflfHI

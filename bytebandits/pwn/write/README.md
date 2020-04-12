@@ -29,7 +29,7 @@ What should I do??
 I overwroted the pointer of \_\_rtld\_lock\_lock\_recursive in libc to one-gadget RCE.  
 I found that gadget by rp++ with option -l1(offset 0xe569f).  
 This gadget always sucesses in this enviroment (in \_\_rtld\_lock\_lock\_recursive).  
-(I heard this technique from @ptrYudai. Thanks:) )
+(I had heard this technique from @ptrYudai. Thanks:) )
 
 So I overwrote memory only one time and got flag.
 

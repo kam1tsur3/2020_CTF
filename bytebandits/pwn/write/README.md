@@ -20,15 +20,15 @@ result of checksec
 
 libc version: 2.27 (distributed with binary)
 ### Exploit 
-In this binary, we can overwrite arbitary address to arbitary value repeatedlly.
-Furthermore, we are given the address of puts in libc and stack pointer(rbp-0x18 in main).
-But PIE and Full RELRO is enable, so we don't know any address in binary and we can't overwrite the global offset table.
-And execution flow is ended with exit() in main, so we can't make ROP chain.
+In this binary, we can overwrite arbitary address to arbitary value repeatedlly.  
+Furthermore, we are given the address of puts in libc and stack pointer(rbp-0x18 in main).  
+But PIE and Full RELRO is enable, so we don't know any address in binary and we can't overwrite the global offset table.  
+And execution flow is ended with exit() in main, so we can't make ROP chain.  
 What should I do??
 
-I overwroted the pointer of \_\_rtld\_lock\_lock\_recursive in libc to one-gadget RCE.
-I found that gadget by rp++ with option -l1(offset 0xe569f).
-This gadget always sucesses in this enviroment (in \_\_rtld\_lock\_lock\_recursive).
+I overwroted the pointer of \_\_rtld\_lock\_lock\_recursive in libc to one-gadget RCE.  
+I found that gadget by rp++ with option -l1(offset 0xe569f).  
+This gadget always sucesses in this enviroment (in \_\_rtld\_lock\_lock\_recursive).  
 (I heard this technique from @ptrYudai. Thanks:) )
 
 So I overwrote memory only one time and got flag.

@@ -1,1 +1,5 @@
-# 2020_CTF
+# 2020\_CTF
+## Writeup
+* [nullcon HackIM](https://github.com/kam1tsur3/2020_CTF/blob/master/nullcon/README.md)
+* [zer0pts CTF](https://github.com/kam1tsur3/2020_CTF/blob/master/zer0pts/README.md)
+* [ByteBandits CTF](https://github.com/kam1tsur3/2020_CTF/blob/master/bytebandits/README.md)

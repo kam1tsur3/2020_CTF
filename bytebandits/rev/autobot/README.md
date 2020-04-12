@@ -2,7 +2,6 @@
 ?pt ?solves
 
 ## Challenge
-Any files were distributed.  
 We were informed the server address and the port number only.
 
 Connect to server, text encrypted with base64 is send.  

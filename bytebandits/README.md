@@ -1,7 +1,7 @@
 # ByteBandits CTF 2020 
 
 ## Result
-??/?? teams (server has been down)
+86/318 teams (server has been down)
 
 I solved the following challenge.
 

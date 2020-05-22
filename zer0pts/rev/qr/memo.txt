@@ -1,0 +1,25 @@
+main()
+	load_qr(&_x24, argv[0])
+		[arg1] = 0xffff_ffff
+		rbp_fd = fopen(arg2, "r")
+		feof(fd)
+		fscanf(fd, "%s", rsp)
+		rcx = [arg1] //-1
+		rdi = rsp // buf
+		while eax == 0:
+			edx = dw[rdi]
+			rdi += 4
+			eax = rdx-0x101_0101
+			edx ~= edx 
+			eax &= edx
+			eax &= 0x8080_8080
+		edx = eax
+		edx >>= 0x10
+		if eax == 0x8080
+			eax = edx
+		rdx = rdi+2
+
+
+	r12 = load_key(argv[1])
+	encrypt(rbp, r12)
+	save_qr(rbp, _x24, argv[2])

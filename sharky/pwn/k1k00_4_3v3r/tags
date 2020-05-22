@@ -1,0 +1,47 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARRAY_SIZE	kikoo_4_ever.c	10;"	d	file:
+Kikoos_observe	kikoo_4_ever.c	/^}Kikoos_observe;$/;"	t	typeref:struct:kikoos_observe	file:
+LIEUX_BUF_SIZE	kikoo_4_ever.c	9;"	d	file:
+Lieux	kikoo_4_ever.c	/^}Lieux;$/;"	t	typeref:struct:lieux	file:
+REGLE_BUF_SIZE	kikoo_4_ever.c	8;"	d	file:
+Regle	kikoo_4_ever.c	/^}Regle;$/;"	t	typeref:struct:regle	file:
+TINY_ARRAY_SIZE	kikoo_4_ever.c	11;"	d	file:
+ajouter_observation	kikoo_4_ever.c	/^void ajouter_observation(char *pseudo, char *observation){$/;"	f
+choisir_lieux	kikoo_4_ever.c	/^void choisir_lieux(){$/;"	f
+choix	kikoo_4_ever.c	/^void choix(){$/;"	f
+creer_lieux	kikoo_4_ever.c	/^void creer_lieux(int i, char *nom, int visite, char initiale){$/;"	f
+creer_regle	kikoo_4_ever.c	/^Regle* creer_regle(char *str_regle, int locked){$/;"	f
+ecrire_regle	kikoo_4_ever.c	/^void ecrire_regle(){$/;"	f
+get_free_index	kikoo_4_ever.c	/^int get_free_index(void **tab){$/;"	f
+get_lieux	kikoo_4_ever.c	/^Lieux* get_lieux(char initiale){$/;"	f
+init_buffering	kikoo_4_ever.c	/^void init_buffering(){$/;"	f
+initiale	kikoo_4_ever.c	/^  char initiale;$/;"	m	struct:lieux	file:
+initialisation	kikoo_4_ever.c	/^void initialisation(){$/;"	f
+introduction	kikoo_4_ever.c	/^void introduction(){$/;"	f
+kikoos_observe	kikoo_4_ever.c	/^Kikoos_observe kikoos_observe;$/;"	v
+kikoos_observe	kikoo_4_ever.c	/^typedef struct kikoos_observe{$/;"	s	file:
+les_lieux_du_kikoo	kikoo_4_ever.c	/^Lieux les_lieux_du_kikoo[TINY_ARRAY_SIZE];$/;"	v
+les_regles_du_kikoo	kikoo_4_ever.c	/^Regle *les_regles_du_kikoo[ARRAY_SIZE];$/;"	v
+lieux	kikoo_4_ever.c	/^typedef struct lieux{$/;"	s	file:
+lire_les_regles	kikoo_4_ever.c	/^void lire_les_regles(){$/;"	f
+lire_observations	kikoo_4_ever.c	/^void lire_observations(){$/;"	f
+lister_les_lieux	kikoo_4_ever.c	/^void lister_les_lieux(){$/;"	f
+locked	kikoo_4_ever.c	/^  int locked;$/;"	m	struct:regle	file:
+main	kikoo_4_ever.c	/^int main(void){$/;"	f
+n_observation	kikoo_4_ever.c	/^  int n_observation;$/;"	m	struct:kikoos_observe	file:
+nom	kikoo_4_ever.c	/^  char nom[LIEUX_BUF_SIZE];$/;"	m	struct:lieux	file:
+observations	kikoo_4_ever.c	/^  char observations[10][128];$/;"	m	struct:kikoos_observe	file:
+pseudos	kikoo_4_ever.c	/^  char pseudos[10][32];$/;"	m	struct:kikoos_observe	file:
+read_user_int	kikoo_4_ever.c	/^int read_user_int(){$/;"	f
+read_user_str	kikoo_4_ever.c	/^void read_user_str(char* s, int size){$/;"	f
+regle	kikoo_4_ever.c	/^  char regle[REGLE_BUF_SIZE];$/;"	m	struct:regle	file:
+regle	kikoo_4_ever.c	/^typedef struct regle{$/;"	s	file:
+scenario_j	kikoo_4_ever.c	/^void scenario_j(){$/;"	f
+scenario_t	kikoo_4_ever.c	/^void scenario_t(){$/;"	f
+scenario_y	kikoo_4_ever.c	/^void scenario_y(){$/;"	f
+visite	kikoo_4_ever.c	/^  int visite;$/;"	m	struct:lieux	file:

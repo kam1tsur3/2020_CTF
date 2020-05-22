@@ -1,0 +1,65 @@
+setvbufx3()
+dest_x8 = setmmap(0x80):
+
+buf_x10 = calloc(0x80,1)
+rvread_x14 = read(0, buf, 0x80)
+rvread_x14 = 0x80
+[0x4088] = b[buf+0x7f]
+xor_en(buf):
+	while cnt <= 0x7f:
+		b[arg1+cnt] ^= b[0x4088]
+		cnt++
+memcpy(dest, buf, 0x80)
+write(1 [0x2021], 4) #\x13 7 7 \x13
+
+fflush()
+fflush()
+s_x20 = calloc(0x80,1)
+rv_read = read(0, s, 0x80)
+b[s+rv_read] = 0
+
+if strlen(s) > 0xb
+	(dest, s, 0x80):
+		arg1_x58 = rdi
+		arg2_x60 = rsi
+		arg3_x64 = rdx
+		_x18 = arg1
+		rv_strchr_x20 = strchr(arg2, "R")
+		if _x20 == 0
+			exit(-2)
+		status_x24 = atoi(rv_strchr+1)	
+		if 0 <= status <= 7 
+			exit(status)
+		_x4 = 0
+		while _x4 < arg3
+			if b[_x18+_x4] <= status
+				b[_x18+_x4] = 0x90 // nop?
+			_x4++
+		rv_strchr = strchr(arg2, "S")
+		if _x20 == 0
+			exit(-2)
+		w_x46 = w[rv_strchr+1]
+		w_x49 = w[rv_strchr+4]
+		_x28 = atoi(_x46)	
+		_x2c = atoi(_x49)
+		if _x28 == 0 || _x2c == 0 || _x28 = _x2c 
+					 || _x28 == 0x90 || _x2c == 0x90
+					 || _x28 <= 0x7f || _x2c <= 0x7f
+			exit()
+		_x8 = 0
+
+
+
+
+
+
+
+else
+	(dest, "R97S12-18L40C30", 0x80)
+	
+_x24 = setmunmap(dest, 0x80)
+if _x24 = 0
+	return
+else
+	exit(-2)
+

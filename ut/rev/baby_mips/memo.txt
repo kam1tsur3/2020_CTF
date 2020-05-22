@@ -1,0 +1,5 @@
+gp = 0x41a020
+a0 = [gp-0x7fe8]
+a1 = [sp]
+a2 = sp+4
+a3 = [gp-0x7fe4]

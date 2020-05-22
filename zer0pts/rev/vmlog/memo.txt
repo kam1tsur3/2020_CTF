@@ -1,0 +1,54 @@
+M+s+>s>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[s<<l>*<s>>l-]<<l-s>l*-s*-s*-s*-s*-s*-s>l*+++++s*-----s****s>>l+s[Ml-s<<l>,[<<*>>s<<<l>>>%<s>>l<s>l+s<l]>l]<<lp
+
+6loop
+reg = 4
+reg = 3
+mem[1] = reg
+reg = 9
+reg = 8
+mem[1] = reg
+reg = 64
+reg = 63
+
+reg = 63*63
+mem[1] = x
+
+loop
+reg = 1
+p=5 // 1origin
+while
+	print
+	reg = mem[p] 		// reg = 1
+	reg-- 				// reg = 0
+	mem[p] = reg 		// mem[5] = 0
+	p -= 2				// p = 3
+	reg = mem[p]		// reg = mem[3]
+	p += 1				// p = 4
+	reg = ord(read())	
+	
+	while
+		p -= 2 				// p = 2
+		reg *= mem[p]	 	//
+		p += 2 				// p = 4
+		mem[p] = reg	 	// mem[4] = 
+		p -= 3				// p = 1
+		reg = mem[p]		// reg = mem[1]
+		p += 3				// p = 4
+		reg = mem[p] % reg  // reg = mem[4] % mem[1]
+		p -= 1				// p = 3
+		mem[p] = reg		// 
+		p += 2
+		reg = mem[p]
+		p -= 1
+		mem[p] = rega
+		p += 1
+		reg = mem[p]
+		reg += 1
+		reg = mem[p]
+		p -= 1
+		reg = mem[p]
+	p += 1
+	reg = mem[p]
+			
+
+

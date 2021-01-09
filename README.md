@@ -7,3 +7,6 @@
 * [redpwn CTF](https://github.com/kam1tsur3/2020_CTF/blob/master/redpwn/README.md)
 * [InterKosen CTF(not rated)](https://kam1tsur3.hatenablog.com/entry/2020/09/07/205628) (in Japanese)
 * [ASIS CTF Finals 2020](https://github.com/kam1tsur3/2020_CTF/blob/master/asis_final/README.md)
+
+## Links
+[Writeups in 2021](https://github.com/kam1tsur3/2021_CTF/blob/master/README.md)
